@@ -77,9 +77,6 @@
         "src/**/*.{js,jsx,ts,tsx}",
         "!<rootDir>/node_modules/"
       ],
-      "setupFiles": [
-        "./node_modules/react-native-gesture-handler/jestSetup.js"
-      ],
       "testPathIgnorePatterns": [
         "dist"
       ]
