@@ -1,8 +1,8 @@
 {
-    "name": "@ignitex/lib",
+    "name": "ignitex",
     "version": "2.0.0",
     "description": "Ignitex Design System for React Native",
-    "private": true,
+    "private": false,
     "main": "dist/index.js",
     "scripts": {
       "lint": "eslint src",
