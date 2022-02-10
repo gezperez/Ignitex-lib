@@ -68,7 +68,7 @@
     "husky": {
       "hooks": {
         "pre-commit": "yarn lint-staged",
-        "pre-push": "yarn tsc && yarn test && yarn lint --quiet"
+        "pre-push": "yarn tsc && yarn lint --quiet"
       }
     },
     "jest": {
