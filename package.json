@@ -16,7 +16,9 @@
     "build": "tsc",
     "prepare": "yarn build",
     "test": "jest",
-    "release": "echo no release script yet"
+    "release": "echo no release script yet",
+    "storybook": "start-storybook -p 7007",
+    "build-storybook": "build-storybook"
   },
   "files": [
     "react-native.config.js",
@@ -37,6 +39,13 @@
     "@babel/preset-env": "7.11.0",
     "@babel/preset-typescript": "7.10.4",
     "@react-native-community/eslint-config": "2.0.0",
+    "@storybook/addon-actions": "^5.3",
+    "@storybook/addon-knobs": "^5.3",
+    "@storybook/addon-links": "^5.3",
+    "@storybook/addon-ondevice-actions": "5.3.23",
+    "@storybook/addon-ondevice-knobs": "^5.3.25",
+    "@storybook/react-native": "^5.3.25",
+    "@storybook/react-native-server": "^5.3.23",
     "@testing-library/react-hooks": "3.4.2",
     "@testing-library/react-native": "7.1.0",
     "@types/jest": "26.0.8",
@@ -45,6 +54,7 @@
     "@types/react-native": "0.62.16",
     "@types/react-test-renderer": "16.9.3",
     "babel-jest": "26.2.2",
+    "babel-loader": "^8.2.3",
     "eslint": "7.6.0",
     "eslint-config-prettier": "6.11.0",
     "eslint-plugin-import": "2.22.0",
@@ -83,6 +93,9 @@
     ],
     "testPathIgnorePatterns": [
       "dist"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/__mocks__/globalMock.js"
     ]
   }
 }
