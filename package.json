@@ -1,85 +1,88 @@
 {
-    "name": "ignitex",
-    "version": "2.0.0",
-    "description": "Ignitex Design System for React Native",
-    "private": false,
-    "main": "dist/index.js",
-    "scripts": {
-      "lint": "eslint src",
-      "clean:dist": "rm -rf dist",
-      "prebuild": "yarn clean:dist",
-      "copy:assets": "cp -r src/assets dist",
-      "build": "tsc",
-      "prepare": "yarn build",
-      "test": "jest",
-      "release": "echo no release script yet"
-    },
-    "files": [
-      "react-native.config.js",
-      "jestSetup.js",
-      "dist/",
-      "README.md"
-    ],
-    "repository": {
-      "type": "git",
-      "url": "git+https://github.com/gezperez/Ignitex-lib"
-    },
-    "bugs": {
-      "url": "https://github.com/gezperez/Ignitex-lib/issues"
-    },
-    "homepage": "https://github.com/gezperez/Ignitex-lib/#readme",
-    "devDependencies": {
-      "@babel/core": "7.11.0",
-      "@babel/preset-env": "7.11.0",
-      "@babel/preset-typescript": "7.10.4",
-      "@react-native-community/eslint-config": "2.0.0",
-      "@testing-library/react-hooks": "3.4.2",
-      "@testing-library/react-native": "7.1.0",
-      "@types/jest": "26.0.8",
-      "@types/lodash": "4.14.157",
-      "@types/react": "16.9.53",
-      "@types/react-native": "0.62.16",
-      "@types/react-test-renderer": "16.9.3",
-      "babel-jest": "26.2.2",
-      "eslint": "7.6.0",
-      "eslint-config-prettier": "6.11.0",
-      "eslint-plugin-import": "2.22.0",
-      "eslint-plugin-react-native": "3.8.1",
-      "eslint-plugin-simple-import-sort": "5.0.3",
-      "husky": "4.2.5",
-      "jest": "26.2.2",
-      "lint-staged": "10.2.11",
-      "metro-react-native-babel-preset": "0.63.0",
-      "react": "16.14.0",
-      "react-native": "0.63.3",
-      "react-test-renderer": "16.14.0",
-      "typescript": "3.9.6"
-    },
-    "dependencies": {
-      "lodash": "4.17.15"
-    },
-    "peerDependencies": {
-      "react": ">=16.9.0",
-      "react-native": ">=0.63.0"
-    },
-    "lint-staged": {
-      "**/*.{js,jsx,ts,tsx}": "yarn eslint"
-    },
-    "husky": {
-      "hooks": {
-        "pre-commit": "yarn lint-staged",
-        "pre-push": "yarn tsc && yarn lint --quiet"
-      }
-    },
-    "jest": {
-      "preset": "react-native",
-      "collectCoverageFrom": [
-        "src/**/*.{js,jsx,ts,tsx}",
-        "!<rootDir>/node_modules/"
-      ],
-      "testPathIgnorePatterns": [
-        "dist"
-      ]
+  "name": "ignitex",
+  "version": "2.0.0",
+  "description": "Ignitex Design System for React Native",
+  "author": {
+    "name": "Ezequiel Perez",
+    "email": "ezequielperezpc@gmail.com"
+  },
+  "private": false,
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "clean:dist": "rm -rf dist",
+    "prebuild": "yarn clean:dist",
+    "copy:assets": "cp -r src/assets dist",
+    "build": "tsc",
+    "prepare": "yarn build",
+    "test": "jest",
+    "release": "echo no release script yet"
+  },
+  "files": [
+    "react-native.config.js",
+    "jestSetup.js",
+    "dist/",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gezperez/Ignitex-lib"
+  },
+  "bugs": {
+    "url": "https://github.com/gezperez/Ignitex-lib/issues"
+  },
+  "homepage": "https://github.com/gezperez/Ignitex-lib/#readme",
+  "devDependencies": {
+    "@babel/core": "7.11.0",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-typescript": "7.10.4",
+    "@react-native-community/eslint-config": "2.0.0",
+    "@testing-library/react-hooks": "3.4.2",
+    "@testing-library/react-native": "7.1.0",
+    "@types/jest": "26.0.8",
+    "@types/lodash": "4.14.157",
+    "@types/react": "16.9.53",
+    "@types/react-native": "0.62.16",
+    "@types/react-test-renderer": "16.9.3",
+    "babel-jest": "26.2.2",
+    "eslint": "7.6.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-react-native": "3.8.1",
+    "eslint-plugin-simple-import-sort": "5.0.3",
+    "husky": "4.2.5",
+    "jest": "26.2.2",
+    "lint-staged": "10.2.11",
+    "metro-react-native-babel-preset": "0.63.0",
+    "react": "16.14.0",
+    "react-native": "0.63.3",
+    "react-test-renderer": "16.14.0",
+    "typescript": "3.9.6"
+  },
+  "dependencies": {
+    "lodash": "4.17.15"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-native": ">=0.63.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": "yarn eslint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged",
+      "pre-push": "yarn tsc && yarn lint --quiet"
     }
+  },
+  "jest": {
+    "preset": "react-native",
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "dist"
+    ]
   }
-  
+}
